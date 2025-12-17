@@ -1,0 +1,10 @@
+
+services:
+  ip-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    container_name: ip-service
+    restart: always
