@@ -9,3 +9,8 @@ variable "deploy_lambda" {
   type        = bool
   default     = false
 }
+
+variable "ecs_image_name" {
+  type    = string
+  default = "gowtham014/ip-service-app:1.0.0"
+}

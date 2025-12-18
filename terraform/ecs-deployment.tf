@@ -92,7 +92,7 @@ resource "aws_ecs_task_definition" "ecs_task" {
   container_definitions = jsonencode([
     {
       name      = "pretest-container"
-      image     = "gowtham014/ip-service-app:1.0.0"
+      image     = var.ecs_image_name
       essential = true
 
       portMappings = [
