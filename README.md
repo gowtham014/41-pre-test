@@ -63,7 +63,7 @@ Directory structure of repository is as follows
     # Sample variables can be found in ecs.tfvars
     terraform plan --var-file lambda.tfvars
     terraform apply --var-file lambda.tfvars
-    terraform destroy --var-file lambba.tfvars
+    terraform destroy --var-file lambda.tfvars 
   ```
 3. __HYBRID__ : This Option creates Both the resources 
   - This creates both option `1 and 2`
@@ -76,3 +76,4 @@ Directory structure of repository is as follows
     terraform apply --var-file hybrid.tfvars
     terraform destroy --var-file hybrid.tfvars
   ```
+
