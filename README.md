@@ -4,14 +4,14 @@
 As per the sent mail took up the task of creating Docker image and ECS/EKS cluster of simmple timestamp and Ip app 
 
 The public repository for the task is [public-GitHub-repo-for-Task](https://github.com/gowtham014/41-pre-test.git)
-
+```tree
 Directory structure of repository is as follows 
 ├── Dockerfile
 ├── README.md
 ├── app
 ├── docker-compose.yaml
 └── terraform
-
+```
 
 ## Task-1 Dockerizing SimpleTimeService 
 
@@ -76,4 +76,5 @@ Directory structure of repository is as follows
     terraform apply --var-file hybrid.tfvars
     terraform destroy --var-file hybrid.tfvars
   ```
+
 
