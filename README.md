@@ -76,5 +76,23 @@ Directory structure of repository is as follows
     terraform apply --var-file hybrid.tfvars
     terraform destroy --var-file hybrid.tfvars
   ```
+## Task-3 Deployment of microservice in kubernetes cluster
+- Created a manifest file in directory `micro-service` and manifest file name is `microservice.yaml`
+- The above mentioned yaml manifest consists of following worloads creation in K8s cluster 
+   1. Namespace
+   2. Deployment - `1 Replica`
+   3. Service - `ClusterIP` internal only 
+   4. Access the service using service forward options 
+    ```kubernetes
 
+      cd micro-services/ 
+      kubectl apply -f micro-service.yaml
+      ### Deleting resources ###
+      kubectl delete -f micro-service.yaml
 
+      ### For accessing service locally ###
+      kubectl port-forward service/ip-service 3000:3000 -n ip-service
+    ```
+- **Explaination** : 
+   1. Selection of service `ClusterIP` is common for all clusters and provide port forward service as users will be using VPN to connect with cluster so they can easily access service from private instances, **`I did not select Ingress to expose the service becasue availablity of ingress is imaginary in this case soo selecte port forwarinng option `**
+ 
